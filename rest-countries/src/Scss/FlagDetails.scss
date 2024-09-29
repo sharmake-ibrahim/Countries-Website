@@ -1,0 +1,173 @@
+@import "Variables";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$largin-screens: 679px;
+
+@mixin Desktop{
+    @media (min-width:#{$largin-screens}) {
+        @content;
+    }
+}
+
+.country-border {
+    max-width: 400px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    align-items: center;
+
+
+
+    @include Desktop {
+    
+        padding-left: -2rem;
+    }
+
+    .border {
+        display: flex;
+        column-gap: 15px;
+        flex-wrap: wrap;
+    
+
+        span {
+            @extend .btn-success;
+            padding: 0  15px;
+        }
+       
+    }
+
+    .btn-success {
+        background-color: $card-bg-drk-mode;
+        border: none;
+        padding: 5px 15px;
+        &:hover {
+            background-color: none ;
+        }
+
+        a {
+            color: $white;
+        }
+    }
+
+    p {
+        padding-top: 7px;
+        font-size: 14px;
+    }
+
+   
+    
+}
+
+.Detail-container {
+    min-height: 100vh;
+    min-width: 400px;
+    max-width: 100%;
+    display: grid;
+    justify-content: center;
+    background-color: $Very-dark-blue;
+    color: $white;
+
+
+}
+
+.info-content {
+    display: flex; 
+    justify-content: space-around;
+    flex-direction: column;
+    align-content: center;
+    gap: 1rem;
+
+    @include Desktop {
+        flex-direction: row;
+    }
+
+    .text-one {
+        text-align: start;
+    }
+
+    .text-list {
+        min-width: 250px;
+        h1 {
+        padding-bottom: -15px;
+        font-size: clamp(1rem, 4vw, 1.5rem);
+        text-align: justify;
+        min-width: 200px;
+        
+        }
+    }
+}
+
+
+.info-div {
+    min-height: 100vh;
+    min-width: 370px;
+    max-width: 600px;
+    display: block;
+    justify-content: center;
+    align-content: center;
+    @include Desktop {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        column-gap: 1.5rem;
+    }
+}
+
+
+.text-center {
+    @include Desktop() {
+        margin-top: 6rem;
+    }
+}
+.img-div {
+
+    min-height: 299px;
+    min-width: 320px;
+    max-height: 401px;
+    max-width: 560px;
+
+
+
+    img {
+        min-height: 400px;
+        min-width: 320px;
+        border-radius: 10px;
+        max-height: 401px;
+        max-width: 560px;
+        object-fit: contain;
+    }
+}
+
+
+
+
+
+.content {
+    
+    .content-btn {
+        background-color: $card-bg-drk-mode;
+        border: none;
+        &:hover {
+            
+            background-color: $card-bg-drk-mode;
+        }
+        a {
+            color: $white;
+            text-decoration: none;
+            padding: 0 15px;
+            &:hover {
+                color: $Dark-mode-bg;
+            }
+           
+        }
+        @include Desktop() {
+            margin-left: -10rem;
+        }
+    }
+    
+}
