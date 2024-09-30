@@ -1,11 +1,17 @@
-import { useContext } from "react";
-import {Link, useParams} from "react-router-dom";
-import DataContext from "../Data/Data"
-const FlagDetail = ()=> {
-        // const africa = useContext(DataContext);
-        // const {id} = useParams();
 
-        // console.log("useParms", id);
+import {Link, useParams} from "react-router-dom";
+import { randomCountryData } from "./Layouts";
+import { useState, useContext } from "react";
+import "../Scss/FlagDetails.scss";
+
+
+const FlagDetail = ()=> {
+
+    const country = useContext(randomCountryData);
+        // const africa = useContext(DataContext);
+        const {area} = useParams();
+
+        console.log("useParms", area);
     
         // const countryDetail =  africa.find( (detial)=>  detial.area == Number(id));
 

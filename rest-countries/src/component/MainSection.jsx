@@ -1,8 +1,7 @@
 
     import "../Scss/App.scss";
     import "../Scss/Card.scss";
-   
-
+    
     function MainSection() {
     
 
@@ -11,7 +10,7 @@
 
             
             <main>
-                 HIII 
+              
 
                 {/* {
                     nations.map((nation, index)=> (
@@ -31,8 +30,7 @@
                     </section>
                     ))
                 } */}
-            
-
+        
             </main>
 
             
