@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet , NavLink} from "react-router-dom";
 
 import React, {useState} from "react";
 
@@ -39,7 +39,10 @@ const DefaultPage =()=> {
                 Dropdown button
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a className="dropdown-item" href="#">Action</a></li>
+                <li> 
+                <NavLink className= "dropdown-item" to="/africa" >Africa</NavLink>
+                
+                </li>
                 <li><a className="dropdown-item" href="#">Another action</a></li>
                 <li><a className="dropdown-item" href="#">Something else here</a></li>
             </ul>
