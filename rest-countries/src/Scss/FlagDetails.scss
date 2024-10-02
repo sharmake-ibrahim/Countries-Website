@@ -71,8 +71,6 @@ $largin-screens: 679px;
     justify-content: center;
     background-color: $Very-dark-blue;
     color: $white;
-
-
 }
 
 .info-content {
@@ -87,7 +85,9 @@ $largin-screens: 679px;
     }
 
     .text-one {
-        text-align: start;
+        .text-list {
+            text-align: left;
+        }
     }
 
     .text-list {
@@ -115,34 +115,38 @@ $largin-screens: 679px;
         justify-content: center;
         align-content: center;
         column-gap: 1.5rem;
+        margin-top: 2rem;
     }
 }
 
 
 .text-center {
     @include Desktop() {
-        margin-top: 6rem;
+        text-align: left;
     }
 }
 .img-div {
 
-    min-height: 299px;
-    min-width: 320px;
-    max-height: 401px;
-    max-width: 560px;
+    height: clamp(229px, 15vw,401px );
+    width: clamp(320px, 20vw, 560px);
+  
 
 
 
     img {
-        min-height: 400px;
-        min-width: 320px;
+        height: clamp(229px, 15vw,401px );
+        width: clamp(320px, 20vw, 560px);
+    
         border-radius: 10px;
-        max-height: 401px;
-        max-width: 560px;
-        object-fit: contain;
+        // object-fit: contain;
     }
 }
 
+.text-two {
+        .text-list {
+            text-align: left;
+        }
+}
 
 
 

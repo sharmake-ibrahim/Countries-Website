@@ -1,9 +1,7 @@
-import { Outlet } from "react-router-dom";
-import { NavLink, Link } from "react-router-dom";
 
-import React, {useState, useEffect, createContext} from "react";
-   export const randomCountryData = createContext();
-import FlagDetail from "./FlagDetail";
+import {Link } from "react-router-dom";
+import MainSection from "./MainSection";
+import React, {useState, useEffect} from "react";
 
 const Layouts =()=> {
 
@@ -33,48 +31,14 @@ const Layouts =()=> {
 
     console.log(randomCountry)
     return ( 
+
         <>
-          <header>
-                    <div className="logo"> <h1> Where in the world?</h1></div>
-
-                    {/* <nav onClick={handleClick}>
-                        <div classNameName= {`dark-mode ${ isOpen ? "show" : "hide"}`}>
-                            <img src= {darkIcon} alt="dark mode icon" />
-                        </div>
-                        <div classNameName={`light-mode ${isOpen ? "hide" : "show"}`}>
-                            <img src= {lightIcon} alt=" light mode icon" />
-                        </div>
-                    </nav> */}
-                  
-                    
-                </header>
-
-                <div className="search-section">
-
-            <div className="searchBar">
-                <input type="name"  placeholder="Search for a country…"/>
-            </div>
-            <div className="dropdown">
-            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown button
-            </button>
-            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a className="dropdown-item" href="#">Action</a></li>
-                <li><a className="dropdown-item" href="#">Another action</a></li>
-                <li><a className="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-            </div>
-
-
-</div>
-
-        
-        <main>
                     {
                         randomCountry.map( (country, index)=> {
                             return(
-                             
+                              
                                 <section key={index}>
+                                     <Link to={`/${country.area}`} >
                                 <div className="img">
                                     <img src={country.flags.png} alt="country flage" />
                              
@@ -87,22 +51,20 @@ const Layouts =()=> {
                                         <li> Capital: <small>{country.capital}</small></li>
                                     </ul>
                                 </div>
+                                </Link>
                             </section>
+                            
                            
                             )
                         })
                     }
-
-            <Outlet/>
-
-
-
-            <randomCountryData.Provider value={randomCountry}>
-                <FlagDetail/>
-            </randomCountryData.Provider>
-           
-        </main>
+                           
+      
         </>
+
+    
+
+        
     )
 }
 
