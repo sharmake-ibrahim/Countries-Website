@@ -36,14 +36,16 @@ const DefaultPage =()=> {
             </div>
             <div className="dropdown">
             <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown button
+                Filter by Region
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li> 
                 <NavLink className= "dropdown-item" to="/africa" >Africa</NavLink>
                 
                 </li>
-                <li><a className="dropdown-item" href="#">Another action</a></li>
+                <li>
+                <NavLink className= "dropdown-item" to="/america" >America</NavLink>
+                </li>
                 <li><a className="dropdown-item" href="#">Something else here</a></li>
             </ul>
             </div>

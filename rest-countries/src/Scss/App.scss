@@ -59,6 +59,14 @@ header {
 }
 
 
+li {
+    .dropdown-item {
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
 .search-section {
     min-height: 100px;
     min-width: 100%;
@@ -136,6 +144,10 @@ main {
     grid-template-columns: 100%;
     background-color: $Very-dark-blue;
     gap: 10px 17px;
+
+    a { 
+        text-decoration: none;
+    }
 
     .titleErro {
         color: $white;
