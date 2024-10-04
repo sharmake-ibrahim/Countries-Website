@@ -48,6 +48,7 @@ const DefaultPage =()=> {
                 </li>
                 <li><NavLink className= "dropdown-item" to="/asia" >Asia</NavLink></li>
                 <li><NavLink className= "dropdown-item" to="/europe" >Europe</NavLink></li>
+                <li><NavLink className= "dropdown-item" to="/oceania" >Oceania</NavLink></li>
             </ul>
             </div>
 

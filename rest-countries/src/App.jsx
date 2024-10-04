@@ -14,6 +14,8 @@ import Asia from './component/Asia';
 import AsiaViewPage from './component/AsiaViewPage';
 import Europe from './component/Europe';
 import EuropeViewPage from './component/EuropeViewPage';
+import Oceania from './component/Oceania';
+import OceaniaViewPage from './component/OceaniaViewPage';
 
 
 function App() {
@@ -28,12 +30,14 @@ function App() {
                   <Route path='america' element= {<America/>}/>
                   <Route path='asia' element= {<Asia/>}/>
                   <Route path='europe' element= {<Europe/>}/>
+                  <Route path='oceania' element= {<Oceania/>}/>
             </Route>
              <Route path='/:area' element= { <FlagDetail/>}/>
              <Route path='africa/:africaId' element= { <AfricaViewPage/>}/>
              <Route path='america/:america_Id' element= { <AmericaViewPage/>}/>
              <Route path='asia/:asia_Id' element= {<AsiaViewPage/>}/>
              <Route path='europe/:europe_Id' element= { <EuropeViewPage/>}/>
+             <Route path='oceania/:oceania_Id' element= {<OceaniaViewPage/>}/>
   
         </Routes>
         

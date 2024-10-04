@@ -2,16 +2,16 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../Data/GlobalProvider";
 
-const America = ()=> {
-    const {americaData} = useContext(GlobalContext);
+const Oceania = ()=> {
+    const {oceaniaData} = useContext(GlobalContext);
     // console.log("america data",americaData)
     return(
         <main>
             {
-                americaData.map( (country, index)=> {
+                oceaniaData.map( (country, index)=> {
                     return(
             <section key={index}>
-                <Link to={`/america/${country.area}`} >
+                <Link to={`/oceania/${country.area}`} >
                 
                 <div className="img">
                     <img src={country?.flags.png} alt="country flage" />
@@ -36,4 +36,4 @@ const America = ()=> {
     )
 }
 
-export default America;
+export default Oceania;
