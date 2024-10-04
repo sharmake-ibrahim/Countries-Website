@@ -6,8 +6,10 @@ const GlobalContext = createContext();
 function GlobalProvider({children}) {
     const [africData, setAfricaData] =useState();
     const [americaData, setAmericaData] = useState([]);
+    const [asiaData, setAsiaData] = useState([]);
     const AfricaApiUrl = "https://restcountries.com/v3.1/region/africa";
     const AmericaApiURL= "https://restcountries.com/v3.1/region/america";
+    const AsiaApiURL =  "https://restcountries.com/v3.1/region/asia";
 
     
     const getData = async ()=> {
@@ -19,6 +21,13 @@ function GlobalProvider({children}) {
 
             const res2 = await fetch(AmericaApiURL);
             const data2 = await res2.json();
+
+            //asia
+
+            const res3 = await fetch(AsiaApiURL);
+            const data3 = await res3.json();
+
+            setAsiaData(data3);
             setAmericaData(data2);
 
             setAfricaData(data)
@@ -35,7 +44,7 @@ function GlobalProvider({children}) {
 
     return(
 
-            <GlobalContext.Provider value={ {africData, americaData}}>
+            <GlobalContext.Provider value={ {africData, americaData, asiaData}}>
                 {children}
             </GlobalContext.Provider>
     )

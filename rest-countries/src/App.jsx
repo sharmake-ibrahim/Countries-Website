@@ -10,6 +10,8 @@ import Africa from './component/Africa';
 import AfricaViewPage from './component/AfricaViewPage';
 import America from './component/America';
 import AmericaViewPage from './component/AmericaViewPage';
+import Asia from './component/Asia';
+import AsiaViewPage from './component/AsiaViewPage';
 
 
 function App() {
@@ -22,10 +24,12 @@ function App() {
                   <Route index element= {<Layouts/>}/>
                   <Route path='africa' element= {<Africa/>}/>
                   <Route path='america' element= {<America/>}/>
+                  <Route path='asia' element= {<Asia/>}/>
             </Route>
              <Route path='/:area' element= { <FlagDetail/>}/>
              <Route path='africa/:africaId' element= { <AfricaViewPage/>}/>
              <Route path='america/:america_Id' element= { <AmericaViewPage/>}/>
+             <Route path='asia/:asia_Id' element= {<AsiaViewPage/>}/>
   
         </Routes>
         
