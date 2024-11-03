@@ -11,6 +11,9 @@ function GlobalProvider({children}) {
     const [oceaniaData, setOceaniaData] = useState([]);
 
 
+    const [search, setSearch] = useState('');
+
+
 
     const AfricaApiUrl = "https://restcountries.com/v3.1/region/africa";
     const AmericaApiURL= "https://restcountries.com/v3.1/region/america";
@@ -68,7 +71,7 @@ function GlobalProvider({children}) {
 
     return(
 
-            <GlobalContext.Provider value={ {africData, americaData, asiaData, europeData , oceaniaData}}>
+            <GlobalContext.Provider value={ {africData, americaData, asiaData, europeData , oceaniaData, search, setSearch}}>
                 {children}
             </GlobalContext.Provider>
     )

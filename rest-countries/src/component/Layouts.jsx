@@ -1,18 +1,16 @@
 
 import {Link } from "react-router-dom";
 import MainSection from "./MainSection";
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useContext} from "react";
+import { GlobalContext } from "../Data/GlobalProvider";
 
 const Layouts =()=> {
 
-    // const [isOpen, setIsOpen] = useState(false)
-
-    // const handleClick = ()=> {
-    //     setIsOpen(!isOpen);
-    // }
+    const {search} = useContext(GlobalContext);
     const [randomCountry, setRandomCountry] = useState([]);
     const apiUrl = "https://restcountries.com/v3.1/all";
 
+    console.log("searching a country to conqure.", search)
     const getData =  async ()=> {
         try{
             const res = await fetch(apiUrl)
@@ -34,7 +32,10 @@ const Layouts =()=> {
 
         <>
                     {
-                        randomCountry.map( (country, index)=> {
+                        randomCountry.filter( (country)=> {
+                            return search.toLowerCase() === "" ? country
+                            : country.name.common.toLowerCase().includes(search);
+                        }).map( (country, index)=> {
                             return(
                               
                                 <section key={index}>
