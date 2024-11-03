@@ -1,6 +1,5 @@
 import { Outlet , NavLink} from "react-router-dom";
 import React, {useState , useEffect, useContext} from "react";
-import searchCountry from "./searchCountry";
 import { GlobalContext } from "../Data/GlobalProvider";
 
 const DefaultPage =()=> {
