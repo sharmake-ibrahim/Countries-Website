@@ -7,12 +7,15 @@ const Africa = ()=> {
 
     const  {africData} = useContext(GlobalContext);
     console.log(africData)
-       
+    const {search} = useContext(GlobalContext);
    
  return(
     <main>
 
-    {africData.map( (country, index)=> {
+    {africData.filter( (country)=> {
+        return search.toLowerCase() === "" ?  country 
+        : country.name.common.toLowerCase().includes(search);
+    }).map( (country, index)=> {
           return(
 
          <section key={index}>

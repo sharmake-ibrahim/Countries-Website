@@ -46,14 +46,19 @@ const DefaultPage =()=> {
 
 </div>
 
-        
+
         <main>
+        
+  
+       
             
             <Outlet/>
-           
-          
-           
+            
         </main>
+
+        
+      
+
         </>
     )
 }

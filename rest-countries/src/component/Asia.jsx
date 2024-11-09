@@ -5,10 +5,16 @@ import { GlobalContext } from "../Data/GlobalProvider";
 const Asia = ()=> {
 
     const {asiaData} = useContext(GlobalContext);
+
+    const {search} = useContext(GlobalContext);
+
     return(
         <main>
              {
-                asiaData.map( (country, index)=> {
+                asiaData.filter( (country)=> {
+                    return search.toLowerCase() === "" ?  country 
+                    : country.name.common.toLowerCase().includes(search);
+                }).map( (country, index)=> {
                     return(
                         <section key={index}>
                 <Link to={`/asia/${country.area}`} >
